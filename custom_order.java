@@ -4,82 +4,41 @@ import java.util.Scanner;  // Needed for the Scanner class to read input
 
 public class custom_order {
 
+
     // STEP 1 PRINTING HELLO WORLD TO CONSOLE
     public static void main(String[] args) {
         
-      System.out.println("Hello World!"); // print Hello World to console
-        
-    // TEST CODE
-    
-    // STEP 2 CREATE A SCANNER OBEJCT, DECLARE VARAIBLES, & PRINT STATEMENTS
-	  
+      try (Scanner keyboard = new Scanner (System.in)) {
+        System.out.println("Welcome to Java's Cake & Cupcake Shop!");
+        System.out.println("We make custom cakes with our secret cake batter!");
 
-	 
-    // Introduce shop and prompt user to input first name
-      
+        String firstName; // User's first name
+        firstName = keyboard.nextLine();
+        System.out.printf("Whats your name? %s ", firstName);
+        System.out.println("Whats your order?");
+        String itemOrder; // Item ordered
+        itemOrder = keyboard.nextLine();
+        System.out.printf("Your order coming up: %s ", itemOrder);
+        System.out.println("What frosting you want?");
+        String frostingType; // Frosting ordered
+        frostingType = keyboard.nextLine();
+        System.out.println("Choose a topping!");
+        String fillingType; // Filling ordered
+        fillingType = keyboard.nextLine();
+        System.out.println("And topping?");
+        String toppings; // Toppings ordered
+        toppings = keyboard.nextLine();
+        System.out.printf("Your name %s, and order %s, frosttype %s, filling %s, topping %s ", firstName, itemOrder, frostingType, fillingType, toppings);
+      }catch (Exception e) {
+        System.out.println("Wrong input");
+      }
 
-	  
-	  
-    // TEST CODE
-    
-    // STEP 3 INPUT YOUR NAME AND PREPARE TO VIEW MENU
-   
-	  
-      
-    // TEST CODE     
-    
-    // STEP 4 DISPLAY MENU
-
-	
-      
-
-    // TEST CODE     
-    
-    // STEP 5 PROMPT USER TO ORDER
-
-  
-	  
-	  
-	  
-      
-    // TEST CODE
-      
-    // STEP 6 PROMPT USER TO CHOOSE FROSTING
-
-   
-	 
-	 
-	 
-      
-    //TEST CODE
-      
-    // STEP 7 PROMPT USER TO CHOOSE FILLING
-
-
-	  
-	  
-      
-    // TEST CODE
-      
-    // STEP 8 PROMPT USER TO CHOOSE TOPPINGS
-
-
-	
-      
-      
-    // TEST CODE
-      
-    // STEP 9 DISPLAY ORDER CONFIRMATION
-
-
-      
-	  
-	  
-	  
-    
-    // TEST CODE
-      
-    // STEP 10 DISPLAY COST AND SALES TAX
+      double cost = 15.00; // Cost of cake and cupcakes
+      System.out.println(cost);
+      final double TAX_RATE = .08;  // Sales tax rate
+      System.out.println(TAX_RATE);
+      double tax = 6; // Amount of tax
+      System.out.println(tax);
   
     }   
 }
